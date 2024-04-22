@@ -8,30 +8,19 @@ function sortCarByYearAscendingly(cars) {
 
   // Tulis code-mu disini
 
-  const print = (cars, n) => {
-    let i;
-    for (i=0; i<cars.length; i++) {
-      console.log (cars[i] + " ");
-    }
-  }
-
-  const bubbleSort = (cars, n) => {
-    let temp;
-    for (let i=0; i<cars.length; i++) {
-    for (let j=0; j<cars.length-i-1; j++) {
-      if (cars[j] > cars[j+1]) {
-        temp = cars[j];
-        cars[j]=cars[j+1];
-        cars[j+1]=temp;
+    for (let i=0; i<result.length - 1; i++) {
+      for (let j=0; j<result.length - i -1; j++) {
+        if (result[j].year > result[j+1].year) {
+          const temp = result[j];
+          result[j] = result[j+1];
+          result[j+1] = temp
         }
       }
     }
-  }
-}
-console.log("year", cars)
-bubbleSort(cars, cars.length);
-print(cars, cars.length)
+
+    console.log(result)
 
   // Rubah code ini dengan array hasil sorting secara ascending
   return result;
 
+}

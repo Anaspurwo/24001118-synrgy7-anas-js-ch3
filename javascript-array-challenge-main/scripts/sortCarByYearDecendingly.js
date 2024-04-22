@@ -8,23 +8,17 @@ function sortCarByYearDescendingly(cars) {
 
   // Tulis code-mu disini
 
-  for insertionSort = ("year", cars.length) => {
-    let key;
-    let j;
-
-      for (let i=1; i<cars.length; i++) {
-        key=cars[i];
-        j=i-1;
-
-        while (j >= 0 && cars[j] > key) {
-          cars[j+1] = cars[j];
-          j = j-1;
-        }
-        cars[j+1]=key;
+  for (let i=0; i<result.length-1; i++) {
+    for (let j=0; j<result.length-i-1; j++) {
+      if (result[j].year < result[j+1].year) {
+        const temp = result[j];
+        result[j] = result[j+1];
+        result [j+1] = temp
       }
-  };
+    }
+  }
 
-  insertionSort(cars, cars.length);
+  console.log (result)
 
   // Rubah code ini dengan array hasil sorting secara descending
   return result;
